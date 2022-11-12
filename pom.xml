@@ -10,11 +10,17 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>de.tauiotamy</groupId>
     <artifactId>template</artifactId>
     <version>0.1-SNAPSHOT</version>
     <name>Template project</name>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <repository>
