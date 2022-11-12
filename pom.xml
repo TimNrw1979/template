@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>de.tauiotamy</groupId>
+        <artifactId>versions-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>de.tauiotamy</groupId>
+    <artifactId>template</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <name>Template project</name>
+    <packaging>jar</packaging>
+
+    <repositories>
+        <repository>
+            <id>tauitoamy-snapshots</id>
+            <url>https://repository.tauiotamy.de/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>tauitoamy-releases</id>
+            <url>https://repository.tauiotamy.de/releases</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+</project>
