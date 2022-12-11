@@ -13,10 +13,14 @@ spring:
     url: jdbc:h2:mem:bootapp;DB_CLOSE_DELAY=-1
     username: sa
     password:
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
   thymeleaf:
     cache: false
     check-template: true
     check-template-location: true
     enabled: true
     prefix: classpath:/templates/
-    suffix: .html      
+    suffix: .html
