@@ -1,5 +1,9 @@
 server:
   port: 8080
+  error:
+    path: /error
+    whitelabel:
+      enabled: false
   
 spring:
   application:
@@ -15,4 +19,4 @@ spring:
     check-template-location: true
     enabled: true
     prefix: classpath:/templates/
-    suffix: .html  
+    suffix: .html      
