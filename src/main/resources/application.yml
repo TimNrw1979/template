@@ -1,2 +1,13 @@
 server:
-  port: 8081
+  port: 8080
+  
+spring:
+  application:
+    name: Bootstrap Spring Boot
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html  
