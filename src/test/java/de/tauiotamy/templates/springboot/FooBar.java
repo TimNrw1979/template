@@ -1,4 +1,4 @@
-package de.tauiotamy;
+package de.tauiotamy.templates.springboot;
 
 /**
  * Demo class.

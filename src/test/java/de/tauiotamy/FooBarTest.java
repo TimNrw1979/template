@@ -3,6 +3,8 @@ package de.tauiotamy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import de.tauiotamy.templates.springboot.FooBar;
+
 /**
  * Demo test class.
  */

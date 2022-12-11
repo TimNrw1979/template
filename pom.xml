@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>de.tauiotamy</groupId>
-        <artifactId>versions-parent</artifactId>
-        <version>0.1-SNAPSHOT</version>
-    </parent>
+	<parent>
+		<groupId>de.tauiotamy</groupId>
+		<artifactId>versions-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
 
-    <artifactId>template</artifactId>
-    <version>0.1-SNAPSHOT</version>
-    <name>Template project</name>
-    <packaging>jar</packaging>
+	<groupId>de.tauiotamy.templates</groupId>
+	<artifactId>sprin-boot</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<name>Template project</name>
+	<packaging>jar</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 
-    <repositories>
-        <repository>
-            <id>tauitoamy-snapshots</id>
-            <url>https://repository.tauiotamy.de/snapshots</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>tauitoamy-releases</id>
-            <url>https://repository.tauiotamy.de/releases</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
+		<!-- Tests -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+		</dependency>
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>tauitoamy-snapshots</id>
+			<url>https://repository.tauiotamy.de/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>tauitoamy-releases</id>
+			<url>https://repository.tauiotamy.de/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
 
 </project>
