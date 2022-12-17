@@ -9,7 +9,7 @@
 	</parent>
 
 	<groupId>de.tauiotamy.templates</groupId>
-	<artifactId>sprin-boot</artifactId>
+	<artifactId>spring-boot</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<name>Template project</name>
 	<packaging>jar</packaging>
@@ -19,6 +19,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,6 +37,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
 		</dependency>
 
 		<!-- Logging -->
@@ -46,7 +56,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 		</dependency>
-		
+
 		<!-- Tools -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -56,7 +66,7 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
-		
+
 		<!-- Database -->
 		<dependency>
 			<groupId>com.h2database</groupId>
