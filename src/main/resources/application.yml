@@ -24,3 +24,9 @@ spring:
     enabled: true
     prefix: classpath:/templates/
     suffix: .html
+    
+joinfaces:
+  faces:
+    project-stage: development
+#  primefaces:
+#    theme: omega    
