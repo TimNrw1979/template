@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui" xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 
 <h:head>
 
@@ -70,5 +71,8 @@
 		</h:form>
 	</div>
 
+
+	 <div sec:authorize="isAuthenticated()">
+      Authenticated as <span sec:authentication="name"></span></div>
 </h:body>
 </html>

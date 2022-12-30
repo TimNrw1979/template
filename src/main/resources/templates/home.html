@@ -1,11 +1,47 @@
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Home Page</title>
 </head>
 <body>
-	<h1>Hello !</h1>
+	<h1>
+		Hello <span th:text="${name}">! 
+	</h1>
 	<p>
 		Welcome to <span th:text="${appName}">Our App</span>
 	</p>
+
+	<div sec:authorize="isAuthenticated()">
+		Authenticated as <span sec:authentication="name"></span>
+	</div>
+
+	<div sec:authorize="isAnonymous()">
+		<a class="btn btn-primary" th:href="@{/oauth2/authorization/cognito}"
+			role="button"> Log in with Amazon Cognito </a>
+	</div>
+
+	<div sec:authorize="isAuthenticated()">
+		<p>
+			Hello, <strong th:text="${#authentication.name}"></strong>!
+		</p>
+		<p>
+			Your authorities are: <strong
+				th:each="authority : ${#authentication.authorities}"><span
+				th:text="${authority.authority} + ' '"></span></strong>
+		</p>
+	</div>
+
+	<div sec:authorize="hasRole('USER')" class="alert alert-primary"
+		role="alert">This section is only visible only for ROLE_USER.</div>
+
+	<div sec:authorize="hasRole('ADMIN')" class="alert alert-primary"
+		role="alert">This section is only visible only for ROLE_ADMIN.</div>
+
+	<div sec:authorize="isAuthenticated()" class="alert alert-primary"
+		role="alert">This section is only visible only to authenticated
+		users.</div>
 </body>
 </html>

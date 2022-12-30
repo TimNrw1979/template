@@ -24,6 +24,21 @@ spring:
     enabled: true
     prefix: classpath:/templates/
     suffix: .html
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            clientId: 1oa2ug5igttbai4gfgf8ppui3q
+            clientSecret: 1o90sm3r071tecs4r64omviiqge77m8h4u46uj094bdar6sqksnq
+            scope: openid
+            redirect-uri: http://localhost:8080/login/oauth2/code/cognito
+            clientName: default-app-client
+        provider:
+          cognito:
+            issuerUri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_4OKNOmMqw
+            user-name-attribute: username
+            
     
 joinfaces:
   faces:
