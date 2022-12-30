@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/templates/default.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="content">
+		<div class="card">
+			<p:panelGrid columns="2">
+				<f:facet name="header">
+				User Details
+				<p:graphicImage name="demo/images/misc/kobe.png" />
+				</f:facet>
+
+				<h:outputText value="Username" />
+				<h:outputText value="#{details.userName}" />
+
+				<h:outputText value="Surname" />
+				<h:outputText value="#{details.surName}" />
+
+				<h:outputText value="Forename" />
+				<h:outputText value="#{details.foreName}" />
+
+				<h:outputText value="eMail" />
+				<h:outputText value="#{details.email}" />
+
+				<h:outputText value="Sub" />
+				<h:outputText value="#{details.sub}" />
+
+			</p:panelGrid>
+		</div>
+	</ui:define>
+
+</ui:composition>
